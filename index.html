@@ -1,61 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Music Web</title>
-    <link rel="stylesheet" href="index.css">
+<title>MusicHub</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="index.css">
 </head>
-
 <body>
-
-    <header>
-        <div class="logo">MusicHub</div>
-        <nav>
-            <ul class="hhh">
-                <li><a href="#">Home</a></li>
-                <li><a href="index2.html">Explore</a></li>
-                <li><a href="#">Genres</a></li>
-                <li><a href="#">Playlists</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#" class="login-btn">Login</a></li>
-                <li><a href="#" class="signup-btn">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>Welcome to Our  MusicWeb</h1>
-        <p>Discover, Listen, and Enjoy Your Favorite Music.</p>
-        <a href="#" class="cta-btn">Start Listening</a>
-    </section>
-
-    <section class="music-features">
-        <div class="feature">
-            <i class="fas fa-music"></i>
-            <h2>Explore</h2>
-            <p>Discover a vast collection of music across different genres.</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-headphones"></i>
-            <h2>Listen</h2>
-            <p>Enjoy high-quality audio streaming with your favorite artists.</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-heart"></i>
-            <h2>Favorite</h2>
-            <p>Create playlists and save your favorite tracks for easy access.</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 MusicWeb. All rights reserved.</p>
-    </footer>
-
-
+    <h4>MusicHub</h4>
+<div class="player">
+    <div class="details">
+    <div class="now-playing">PLAYING x OF y</div>
+    <div class="track-art"></div>
+    <div class="track-name">Track Name</div>
+    <div class="track-artist">Track Artist</div>
+    </div>
+    <div class="buttons">
+    <div class="prev-track" onclick="prevTrack()">
+        <i class="fa fa-step-backward fa-2x"></i>
+    </div>
+    <div class="pause-track" onclick="playpauseTrack()">
+        <i class="fa fa-play-circle fa-5x"></i> 
+                                       <!-- https://fontawesome.com/v4/icon/play-circle -->
+    </div>
+    <div class="next-track" onclick="nextTrack()">
+        <i class="fa fa-step-forward fa-2x"></i>
+    </div>
+    </div>
+    <div class="slider_container">
+    <div class="current-time">00:00</div>
+    <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+    <div class="total-duration">00:00</div>
+    </div>
+    <div class="slider_container">
+    <i class="fa fa-volume-down"></i>
+    <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+    <i class="fa fa-volume-up"></i>
+    </div>
+</div>
 <script src="index.js"></script>
-
 </body>
-
 </html>

@@ -1,122 +1,98 @@
-* {
-    box-sizing: border-box;
+body {
+    background-color:darkseagreen; 
+    color: #fff; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    overflow:visible;
+    transition: background-color 8s;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: #fff;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header {
-    background-color: #000;
-    padding: 20px 0;
-}
-
-.logo {
-    font-size: 40px;
-    font-weight: bold;
-}
-
-nav ul {
+.player {
+    height: 95vh;
     display: flex;
-    align-items: center; 
-    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px; 
 }
 
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ff4500;
-}
-
-.hero {
-    text-align: center;
-    padding: 100px 0;
-    background-image: url('oscar-keys-ojVMh1QTVGY-unsplash.jpg');
+.track-art {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    background-image: url("https://source.unsplash.com/Qrspubmx6kE/640x360");
     background-size: cover;
     background-position: center;
+    border-radius: 15%;
 }
 
-.hero h1 {
-    font-size: 3.5em;
-    margin-bottom: 20px;
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.cta-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff4500;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+.playpause-track, .prev-track, .next-track {
+    padding: 15px; 
+    opacity: 0.8;
+    transition: opacity 1s;
+    cursor: pointer; 
 }
 
-.cta-btn:hover {
-    background-color: #333;
+.playpause-track:hover, .prev-track:hover, .next-track:hover {
+    opacity: 1.0;
 }
 
-.music-features {
-    padding: 50px 0;
-    background-color: #000;
-    color: #fff;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.slider_container {
+    width: 100%; 
+    max-width: 400px;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.feature {
-    text-align: center;
+.seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #333; 
 }
 
-.feature i {
-    font-size: 3em;
-    margin-bottom: 10px;
-    color: #ff4500;
+.seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #000;
-    color: #fff;
+.seek_slider {
+    flex: 1; 
 }
 
-@media screen and (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5em;
-    }
-    .hero p {
-        font-size: 1em;
-    }
-    .feature i {
-        font-size: 2em;
-    }
+.volume_slider {
+    flex: 0.5; 
+}
+
+i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+    cursor: pointer;
+}
+
+h4 {
+    font-size: 45px; 
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 30px ; 
+    color:darkgreen; 
 }
