@@ -20,12 +20,14 @@ body {
 .track-art {
     margin: 25px;
     height: 250px;
-    width: 250px;
+    width: 250%;
+
     /* background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230612/pngtree-art-music-background-image_2928765.jpg"); */
     background-size: cover;
     background-position: center;
-    border-radius: 15%;
+    border-radius: 5%;
     margin-bottom: 4%;
+
 }
 
 .details {
@@ -92,9 +94,9 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
 }
 
 h4 {
-    font-size: 45px; 
+    font-size: 60px; 
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     margin-bottom: 30px ; 
     color:darkgreen; 
     

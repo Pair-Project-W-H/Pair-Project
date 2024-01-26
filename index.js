@@ -24,7 +24,7 @@
       { name: "Overdrive", artist: "Ofenbach feat. Norma Jean Martine", image: "https://i.ytimg.com/vi/YV8P4aEXzMU/maxresdefault.jpg", path: "../videos/Ofenbach-Overdrive-feat.-Norma-Jean-Martine-_Official-Music-Video_.mp3" },
       { name: "Mockingbird", artist: "Eminem", image: "https://townsquare.media/site/812/files/2023/03/attachment-eminem-mockingbird-single-art.jpg?w=1200", path: "../videos/Eminem - Mockingbird (Lyrics).mp3" },
       { name: "Creepin", artist:"Metro Boomin, The Weeknd, 21 Savage", image: "https://bananastreet.ru/system/release/cover/9/97/97293/7445806a90.jpg", path: "../videos/Creepin.mp3" },
-      { name: "MAGHRIBI", artist:"ElGrandeToto", image: "https://i.scdn.co/image/ab67616d0000b2734b64480afb10f1d182a17b95", path: "../videos/ElGrandeToto - MAGHRIBI (Audio).mp3" },
+      { name: "MAGHRIBI", artist:"ElGrandeToto", image: "https://i.scdn.co/image/ab67616d0000b2734b64480afb10f1d182a17b95", path: "../videos/\ElGrandeToto - MAGHRIBI (Audio) copy - Copy.mp3" },
       { name: "Superman", artist:"Eminem", image: "https://i.pinimg.com/originals/63/fb/32/63fb32b02c2d1ae59a0f194d7a4bfd03.jpg", path: "../videos/Eminem - Superman (Lyrics).mp3" },
       { name: "back at it", artist:"Gunna", image: "https://i1.sndcdn.com/artworks-neAeMPnlc89Y7MEI-1QcxOQ-t500x500.jpg", path: "../videos/Gunna - back at it [Official Visualizer].mp3" },
       { name: "Bad Liar", artist:"Imagine Dragons", image: "https://i1.sndcdn.com/artworks-000527091948-ykpqq9-t500x500.jpg", path: "../videos/Imagine Dragons - Bad Liar (Official Music Video).mp3"},
@@ -107,10 +107,11 @@
 
   function nextMusic() {
 
-    var seekPosition = 0;
+      var seekPosition = 0;
 
     if (!isNaN(curr_track.duration)) {
-      
+      // seekPosition This calculates the current position of the seek slider as a percentage of the total duration of the audio track.
+
       seekPosition = (curr_track.currentTime / curr_track.duration) * 100;
 
       seek_slider.value = seekPosition;
